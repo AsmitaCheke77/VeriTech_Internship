@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>India Soft</title>
+        <style>
+            body {
+                background-color: lightblue;
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            .team-section {
+                text-align: center;
+                margin: 20px auto;
+                padding: 20px;
+            }
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px; /* Space between columns */
+                justify-content: center; /* Center columns horizontally */
+            }
+            .column {
+                flex: 1;
+                max-width: 100%; /* Default to full width on mobile */
+                padding: 10px;
+                box-sizing: border-box; /* Include padding in width calculation */
+                display: flex;
+                justify-content: center; /* Center content horizontally */
+                align-items: center; /* Center content vertically */
+                transition: transform 0.3s ease; /* Smooth scaling transition */
+            }
+            .column:hover {
+                transform: scale(1.1); /* Smaller scale to avoid layout breaking */
+            }
+            .team-img {
+                width: 75%;
+                max-width: 100px;
+                border-radius: 50%; /* Changed to 50% for a perfect circle */
+            }
+            .team-member {
+                text-align: center;
+            }
+            .heading-button {
+                background-color: rgb(188, 105, 230);
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+            .heading {
+                background-color: rgb(188, 105, 230);
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                display: inline-block;
+                border-radius: 5px;
+            }
+            .profile {
+                color: rgb(188, 105, 230);
+                font-style: italic;
+            }
+            /* Mobile Viewport */
+            @media (max-width: 600px) {
+                .column {
+                    max-width: 100%; /* One column per row */
+                }
+            }
+            /* Tablet Viewport */
+            @media (min-width: 601px) and (max-width: 1024px) {
+                .column {
+                    max-width: 50%; /* Two columns per row */
+                }
+            }
+            /* Desktop Viewport */
+            @media (min-width: 1025px) {
+                .column {
+                    max-width: 25%; /* Four columns per row */
+                }
+            }
+        </style>
+        <script>
+            function toggleVisibility(sectionId) {
+                var section = document.getElementById(sectionId);
+                if (section.style.display === "none") {
+                    section.style.display = "block";
+                } else {
+                    section.style.display = "none";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!-- <div class="flag"></div> -->
+        <div align="center">
+            <h1 class="heading">India Soft</h1>
+            <p>
+                Welcome to India Soft, where a dedicated team of professional works<br>
+                together to bring innovation, creativity and expertise to software industry. Get to know<br>
+                the individuals who make our company thrive.<br><br>
+                <h3 style="color: rgb(188, 105, 230);">---------------------------------------------</h3>
+            </p>
+            <h2>Meet Our Team</h2>
+        </div>
+        
+<!-- Leadership / Management Team -->
+
+        <section class="team-section">
+            <button class="heading-button" onclick="toggleVisibility('leadership-team')">Leadership / Management Team</button>
+            <div id="leadership-team" style="display: none;">
+                <div class="row">
+                    <div class="column">
+                        <figure class="team-member">
+                            <img src="./Images/virat.png" alt="Virat Kohli" class="team-img">
+                            <figcaption>[Virat Kohli]<br><a class="profile">Founder / CEO</a></figcaption>
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <figure class="team-member">
+                            <img src="./Images/dhoni.png" alt="MS Dhoni" class="team-img">
+                            <figcaption>[MS Dhoni]<br><a class="profile">Founder / CEO</a></figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <figure class="team-member">
+                            <img src="./Images/rohit.png" alt="Rohit Sharma" class="team-img">
+                            <figcaption>[Rohit Sharma]<br><a class="profile">VP, Development & Growth</a></figcaption>
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <figure class="team-member">
+                            <img src="./Images/hardik.png" alt="Hardik Pandya" class="team-img">
+                            <figcaption>[Hardik Pandya]<br><a class="profile">VP, Sales & Marketing</a></figcaption>
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <figure class="team-member">
+                            <img src="./Images/jadeja.png" alt="Ravindra Jadeja" class="team-img">
+                            <figcaption>[Ravindra Jadeja]<br><a class="profile">VP, Finance & Operation</a></figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+<!-- Development Team -->
+
+        <section class="team-section">
+            <button class="heading-button" onclick="toggleVisibility('development-team')">Development Team</button>
+            <div id="development-team" style="display: none;">
+                <div class="row">
+                    <div class="column">
+                        <figure class="team-member">
+                            <img src="./Images/bumrah.png" alt="Jasprit Bumrah" class="team-img">
+                            <figcaption>[Jasprit Bumrah]<br><a class="profile">Team Lead, SE</a></figcaption>
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <figure class="team-member">
+                            <img src="./Images/kl.png" alt="KL Rahul" class="team-img">
+                            <figcaption>[KL Rahul]<br><a class="profile">Software Engineer</a></figcaption>
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <figure class="team-member">
+                            <img src="./Images/gill.png" alt="Shubhman Gill" class="team-img">
+                            <figcaption>[Shubhman Gill]<br><a class="profile">Software Engineer</a></figcaption>
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <figure class="team-member">
+                            <img src="./Images/pant.png" alt="Rishabh Pant" class="team-img">
+                            <figcaption>[Rishabh Pant]<br><a class="profile">Software Engineer</a></figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <figure class="team-member">
+                            <img src="./Images/shreyas.png" alt="Shreyas Iyer" class="team-img">
+                            <figcaption>[Shreyas Iyer]<br><a class="profile">Software Engineer</a></figcaption>
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <figure class="team-member">
+                            <img src="./Images/shami.png" alt="Mohammed Shami" class="team-img">
+                            <figcaption>[Mohammed Shami]<br><a class="profile">Software Engineer</a></figcaption>
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <figure class="team-member">
+                            <img src="./Images/chahal.png" alt="Yuzvendra Chahal" class="team-img">
+                            <figcaption>[Yuzvendra Chahal]<br><a class="profile">Software Engineer</a></figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Sales and Marketing Team -->
+
+        <section class="team-section">
+            <button class="heading-button" onclick="toggleVisibility('sales-team')">Sales and Marketing Team</button>
+            <div id="sales-team" style="display: none;">
+                <h3></h3>
+                <div class="row">
+                    <div class="column">
+                        <figure class="team-member">
+                            <img src="./Images/dhawan.png" alt="Shikhar Dhawan" class="team-img">
+                            <figcaption>[Shikhar Dhawan]<br><a class="profile">Team Lead</a></figcaption>
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <figure class="team-member">
+                            <img src="./Images/bhuvaneshwar.png" alt="Bhuvaneshwar Kumar" class="team-img">
+                            <figcaption>[Bhuvaneshwar Kumar]<br><a class="profile">Sales Officer</a></figcaption>
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <figure class="team-member">
+                            <img src="./Images/surya.png" alt="Suryakumar Yadav" class="team-img">
+                            <figcaption>[Suryakumar Yadav]<br><a class="profile">Sales Officer</a></figcaption>
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <figure class="team-member">
+                            <img src="./Images/chahar.png" alt="Deepak Chahar" class="team-img">
+                            <figcaption>[Deepak Chahar]<br><a class="profile">Sales Officer</a></figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <figure class="team-member">
+                            <img src="./Images/shaw.png" alt="Prithwi Shaw" class="team-img">
+                            <figcaption>[Prithwi Shaw]<br><a class="profile">Marketing Officer</a></figcaption>
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <figure class="team-member">
+                            <img src="./Images/ishan.png" alt="Ishan Kishan" class="team-img">
+                            <figcaption>[Ishan Kishan]<br><a class="profile">Marketing Officer</a></figcaption>
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <figure class="team-member">
+                            <img src="./Images/washington.png" alt="Washington Sundar" class="team-img">
+                            <figcaption>[Washington Sundar]<br><a class="profile">Marketing Officer</a></figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
